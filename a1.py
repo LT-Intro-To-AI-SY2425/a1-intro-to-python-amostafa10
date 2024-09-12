@@ -11,7 +11,7 @@ a function. They should be removed and replaced with your solution.
 This portion of the assignment will not be graded, but this gives you some problems to 
 check, if you do not complete the generative AI portion of the assignment.
 """
-
+import math
 from typing import List, TypeVar
 
 
@@ -25,6 +25,9 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
+
+    return abs(n)
+
     raise NotImplementedError("absolute")
 
 
@@ -38,6 +41,12 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
+
+    if n == 0:
+        return 1
+
+    return n * factorial(n - 1)
+
     raise NotImplementedError("factorial")
 
 
@@ -55,6 +64,17 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
+
+    newList = []
+    add = False
+
+    for i in range(0, len(lst)):
+        add = not add
+        if add:
+            newList.append(lst[i])
+
+    return newList
+
     raise NotImplementedError("every_other")
 
 
@@ -68,6 +88,14 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
+
+    sum = 0
+
+    for x in lst:
+        sum += x
+
+    return sum
+
     raise NotImplementedError("sum_list")
 
 
@@ -80,6 +108,9 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
+
+    return sum(lst)/len(lst)
+
     raise NotImplementedError("mean")
 
 
@@ -95,6 +126,15 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
+
+    length = len(lst)
+    middle = length // 2
+
+    if length % 2 == 0:
+        return (lst[middle] + lst[middle + 1]) / 2
+    else:
+        return lst[middle]
+
     raise NotImplementedError("median")
 
 
@@ -117,6 +157,14 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
+
+    index = 2
+    while len(lst) > 2:
+        del lst[index]
+        index = (index + 2) % len(lst)
+
+    return lst
+
     raise NotImplementedError("duck_duck_goose")
 
 

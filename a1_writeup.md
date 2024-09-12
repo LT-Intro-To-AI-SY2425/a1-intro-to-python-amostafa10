@@ -14,10 +14,12 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 
 1. What is your initial thoughts about the python programming language?
 
-
+Python is great for prototyping things quickly because the amount of code required to do stuff is usually very minimal. There's always some function or method that already exists that does what you need.
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
 
-
+Python has obviously similar semantics to other languages like variables, functions, etc. The main difference that I'm not a fan of is the indentation based blocks.
 
 3. What are some things that you learned through this assignment?
+
+Writing Python code and using some pre-built functions.
