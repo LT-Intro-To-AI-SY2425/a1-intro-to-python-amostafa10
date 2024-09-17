@@ -26,7 +26,9 @@ def absolute(n: int) -> int:
         the absolute value of the passed in number
     """
 
-    return abs(n)
+    if n < 0:
+        n *= -1
+    return n
 
     raise NotImplementedError("absolute")
 
@@ -109,7 +111,10 @@ def mean(lst: List[int]) -> float:
         the mean of the passed in list
     """
 
-    return sum(lst)/len(lst)
+    length = len(lst)
+    if length == 0:
+        return 0
+    return sum(lst)/length
 
     raise NotImplementedError("mean")
 
